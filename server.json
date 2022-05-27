@@ -20,17 +20,25 @@
       "id": 3,
       "name": "A la Camarón",
       "description": "Macarrão com vegetais de primeira linha e camarão dos 7 mares.",
-      "price": "25.90",
+      "price": "28.90",
       "available": false,
       "image": "https://storage.googleapis.com/golden-wind/bootcamp-gostack/desafio-food/food3.png"
     },
     {
-      "image": "Something Cool",
+      "image": "https://i.stack.imgur.com/ZQrQO.jpg",
       "name": "Italian",
       "price": "20.46",
       "description": "Mac & Cheese basically",
       "available": true,
       "id": 5
+    },
+    {
+      "image": "https://sass-lang.com/assets/img/logos/logo-b6e1ef6e.svg",
+      "name": "Saas a Milanese",
+      "price": "12.60",
+      "description": "Bom e Barato!",
+      "available": true,
+      "id": 6
     }
   ]
 }

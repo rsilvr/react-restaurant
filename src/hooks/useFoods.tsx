@@ -1,4 +1,4 @@
-import { useState, createContext, ReactNode, useEffect } from 'react'
+import { useState, createContext, ReactNode, useEffect, useContext } from 'react'
 import { Food } from '../models/food'
 import api from '../services/api'
 
@@ -15,7 +15,7 @@ interface FoodsProviderProps {
   children: ReactNode[] | ReactNode
 }
 
-export const FoodsContext = createContext<FoodsContextProps>({} as FoodsContextProps)
+const FoodsContext = createContext<FoodsContextProps>({} as FoodsContextProps)
 
 export const FoodsProvider = ({ children }: FoodsProviderProps) => {
   const [foods, setFoods] = useState<Food[]>([])
@@ -55,4 +55,8 @@ export const FoodsProvider = ({ children }: FoodsProviderProps) => {
       { children }
     </FoodsContext.Provider>
   )
+}
+export function useFoods(): FoodsContextProps {
+  const context = useContext(FoodsContext)
+  return context;
 }
